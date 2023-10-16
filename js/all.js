@@ -14,22 +14,7 @@ const musicData = async() =>{
     console.log(id)
     allData1(id);
 };
-const DrawingData = async() =>{
-    const res = await fetch('https://openapi.programming-hero.com/api/videos/categories');
-    const datas = await res.json();
-    const data = datas.data;
-    const id = data[2].category_id;
-    console.log(id)
-    allData1(id);
-};
-const ComedyData = async() =>{
-    const res = await fetch('https://openapi.programming-hero.com/api/videos/categories');
-    const datas = await res.json();
-    const data = datas.data;
-    const id = data[3].category_id;
-    console.log(id)
-    allData1(id);
-};
+
 
   
 //   allData1();
