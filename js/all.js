@@ -48,7 +48,7 @@ const allData2 = (data) => {
             </p>
             <p class="text-base text-gray-500 dark:text-gray-400">
               <time pubdate datetime="2022-02-08" title="February 8th, 2022"
-                >${info.others.views}  <span>${info.authors[0].verified == true? `<i class="fa fa-check-circle"></i>`  : ' '}</span></time>
+                >${info.others.views}  </time>
             </p>
           </div>
         </div>
