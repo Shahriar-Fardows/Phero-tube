@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- tailwind and flowbite link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <header>
+      <!-- Breadcrumb -->
+        <nav class="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="index.html" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                </svg>
+                Home
+                <svg class="w-3 h-3 mx-1 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+              </a>
+            </li>
+          </ol>
+        </nav>
+    </header>
+
+
+    <!-- div all code are here  -->
+    
+    <main
+      class="pt-[5rem] pb-16 lg:pt-[7rem] lg:pb-24 bg-white dark:bg-gray-900 antialiased"
+      >
+      <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+        <article
+          class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
+        >
+          <div class="mb-4 lg:mb-6 not-format">
+            <address class="flex items-center mb-6 not-italic">
+              <div
+                class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"
+              >
+                <img
+                  class="mr-4 w-16 h-16 rounded-full"
+                  src="./img/Snapchat-19482182.jpg"
+                  alt="Jese Leos"
+                />
+                <div>
+                  <a
+                    href="#"
+                    rel="author"
+                    class="text-xl font-bold text-gray-900 dark:text-white"
+                    >Shahriar Fardows</a
+                  >
+                  <p class="text-base text-gray-500 dark:text-gray-400">
+                    web developer
+                  </p>
+                  <p class="text-base text-gray-500 dark:text-gray-400">
+                    <time
+                      pubdate
+                      datetime="2022-02-08"
+                      title="February 8th, 2022"
+                      >Oct. 15, 2023</time
+                    >
+                  </p>
+                </div>
+              </div>
+            </address>
+            <h1
+              class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
+            >
+              Answer the Blog Questions
+            </h1>
+          </div>
+
+          <figure>
+            <img
+              src="./img/james-harrison-vpOeXr5wmR4-unsplash.jpg"
+              alt=""
+            />
+          </figure>
+          <br /><br />
+          <!-- Questions -->
+         <div>
+          <div>
+            <h1
+              class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+            >
+              1. Discuss the scope of var, let, and const
+            </h1>
+            <br />
+            <p class="font-bold text-gray-900 dark:text-white">
+              Ans:In JavaScript, var, let, and const are used to declare
+              variables, but they have different scopes and behaviors.
+            </p>
+            <br />
+            <div>
+              <span class="font-bold">1. var :</span>
+              <ul style="list-style-type: circle">
+                <li>
+                  Variables declared with var have function scope. They are only
+                  accessible within the function in which they are defined.
+                </li>
+                <li>
+                  They are also hoisted, which means the variable declaration is
+                  moved to the top of the function, but the initialization
+                  remains in place.
+                </li>
+              </ul><br>
+
+                <pre class="snap-x" style="background-color: #4c4e4d">
+                                    <code class="text-white"><br>  function exampleVar() {<br>   if (true) {<br>    var x = 10;<br>   }<br>  console.log(x); // 10
+                                    <br>   }<br>   exampleVar();<br>  console.log(x); // Error: x is not defined
+                                    
+                                </code>
+                </pre>
+            </div>
+            <br /><br />
+            <div>
+                <span class="font-bold">2. let :</span>
+              <ul style="list-style-type: circle">
+                <li>
+                  Variables declared with const are like let in terms of block
+                  scope, but they must be initialized with a value, and that
+                  value cannot be changed after assignment.
+                </li>
+              </ul><br>
+
+              <pre class="snap-x" style="background-color: #4c4e4d">
+                            <code class="text-white"><br> function exampleLet() {<br> if (true) {<br>  let y = 20;<br>  }<br>  console.log(y); // Error: y is not defined<br>  }<br>  exampleLet();
+                              
+                              
+                              
+                        </code>
+                      </pre>
+            </div>
+            <br /><br />
+            <div>
+                <span class="font-bold">3. const :</span>
+              <ul style="list-style-type: circle">
+                <li>
+                  Variables declared with var have function scope. They are only
+                  accessible within the function in which they are defined.
+                </li>
+                <li>
+                  They are also hoisted, which means the variable declaration is
+                  moved to the top of the function, but the initialization
+                  remains in place.
+                </li>
+              </ul><br>
+
+              <pre class="snap-x" style="background-color: #4c4e4d">
+                            <code class="text-white"><br>  function exampleConst() {<br>  const z = 30;<br>  z = 40; // Error: Assignment to constant variable<br>  }<br>   exampleConst();
+                              
+                              
+                        </code>
+                      </pre>
+            </div>
+          </div>
+          
+          <br><br>
+
+          <div>
+                <h1
+                class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+                >
+                2. Tell us the use cases of null and undefined
+                </h1>
+                <br >
+                <p class="font-bold text-gray-900 dark:text-white">
+                Ans:  In JavaScript, null and undefined are distinct values with specific use cases:
+                </p>
+                <br>
+                <div>
+                <span class="font-bold">1. undefined :</span>
+                <ul style="list-style-type: circle">
+                    <li>
+                        undefined represents a variable that has been declared but hasn't been assigned a value.
+                    </li>
+                    <li>
+                        It is often the default value for function parameters when no argument is provided.
+                    </li>
+                    <li>
+                        It is also what you get when you access an object property that doesn't exist.
+                    </li>
+                    <li>
+                        JavaScript can also return undefined in various situations where no value is returned.
+
+                    </li>
+                </ul><br>
+
+                    <pre class="snap-x" style="background-color: #4c4e4d" class="snap-x">
+                                    <code class="text-white"><br> let x; // x is undefined<br> function foo(y) {<br> console.log(y); // If no argument is provided, y is undefined
+                                    <br> }<br> const obj = { prop: 123 };<br> console.log(obj.nonExistentProp); <br>  // Accessing a non-existent property returns undefined
+                                        
+                                        
+                                    </code>
+                    </pre>
+              </div><br>
+                <div>
+                    <span class="font-bold">1. null :</span>
+                    <ul style="list-style-type: circle">
+                        <li>
+                            'null' is a deliberate value that represents the absence of any object value or the lack of a value.
+
+                        </li>
+                        <li>
+                            It is often used when you want to indicate that a variable should have no value or when you want to reset a variable to a "nothing" state.
+
+                        </li>
+                        <li>
+                            It's different from undefined in that it is an explicitly assigned value.
+                        </li>
+                    </ul><br>
+
+                    <pre class="" style="background-color: #4c4e4d">
+                                    <code class="text-white snap-x"><br> let x = null; // x is intentionally set to null<br> const obj = null; // obj is explicitly set to null to indicate no value                                    
+                                    </code>
+                    </pre>
+              </div>
+          </div><br><br>
+          <div>
+            <h1
+            class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+            >
+           3. What do you mean by REST API?
+            </h1>
+            <p >
+            Ans:  A REST (Representational State Transfer) API, a widely used architectural style for designing networked applications, allows communication between systems over the internet. It is based on a set of principles that use standard HTTP methods (GET, POST, PUT, DELETE) for data manipulation. REST APIs use resources, represented by URLs, and operate on them using a stateless and uniform interface. They often return data in common formats like JSON or XML. This simplicity and consistency make REST APIs popular for building web services, enabling clients to request and manipulate data from servers, making them a key component of modern web and mobile application development.
+            </p>
+
+          </div>
+         </div>
+
+
+          <br /><br />
+          <section class="not-format">
+            <div class="flex justify-between items-center mb-6">
+              <h2
+                class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+              >
+                Discussion (20)
+              </h2>
+            </div>
+            <form class="mb-6">
+              <div
+                class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+              >
+                <label for="comment" class="sr-only">Your comment</label>
+                <textarea
+                  id="comment"
+                  rows="6"
+                  class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                  placeholder="Write a comment..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+              >
+                Post comment
+              </button>
+            </form>
+            <article
+              class="p-6 mb-6 text-base bg-white rounded-lg dark:bg-gray-900"
+            >
+              <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                  <p
+                    class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-white"
+                  >
+                    <img
+                      class="mr-2 w-6 h-6 rounded-full"
+                      src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                      alt="Michael Gough"
+                    />Michael Gough
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    <time
+                      pubdate
+                      datetime="2022-02-08"
+                      title="February 8th, 2022"
+                      >Feb. 8, 2022</time
+                    >
+                  </p>
+                </div>
+                <button
+                  id="dropdownComment1Button"
+                  data-dropdown-toggle="dropdownComment1"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  type="button"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 3"
+                  >
+                    <path
+                      d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                    />
+                  </svg>
+                  <span class="sr-only">Comment settings</span>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownComment1"
+                  class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul
+                    class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownMenuIconHorizontalButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Remove</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Report</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </footer>
+              <p>
+                Very straight-to-point article. Really worth time reading. Thank
+                you! But tools are just the instruments for the UX designers.
+                The knowledge of the design tools are as important as the
+                creation of the design strategy.
+              </p>
+              <div class="flex items-center mt-4 space-x-4">
+                <button
+                  type="button"
+                  class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                >
+                  <svg
+                    class="mr-1.5 w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 18"
+                  >
+                    <path
+                      d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                    />
+                  </svg>
+                  Reply
+                </button>
+              </div>
+            </article>
+            <article
+              class="p-6 mb-6 ml-6 lg:ml-12 text-base bg-white rounded-lg dark:bg-gray-900"
+            >
+              <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                  <p
+                    class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-white"
+                  >
+                    <img
+                      class="mr-2 w-6 h-6 rounded-full"
+                      src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                      alt="Jese Leos"
+                    />Jese Leos
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    <time
+                      pubdate
+                      datetime="2022-02-12"
+                      title="February 12th, 2022"
+                      >Feb. 12, 2022</time
+                    >
+                  </p>
+                </div>
+                <button
+                  id="dropdownComment2Button"
+                  data-dropdown-toggle="dropdownComment2"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  type="button"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 3"
+                  >
+                    <path
+                      d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                    />
+                  </svg>
+                  <span class="sr-only">Comment settings</span>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownComment2"
+                  class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul
+                    class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownMenuIconHorizontalButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Remove</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Report</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </footer>
+              <p>Much appreciated! Glad you liked it ☺️</p>
+              <div class="flex items-center mt-4 space-x-4">
+                <button
+                  type="button"
+                  class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                >
+                  <svg
+                    class="mr-1.5 w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 18"
+                  >
+                    <path
+                      d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                    />
+                  </svg>
+                  Reply
+                </button>
+              </div>
+            </article>
+            <article
+              class="p-6 mb-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+            >
+              <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                  <p
+                    class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-white"
+                  >
+                    <img
+                      class="mr-2 w-6 h-6 rounded-full"
+                      src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                      alt="Bonnie Green"
+                    />Bonnie Green
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    <time pubdate datetime="2022-03-12" title="March 12th, 2022"
+                      >Mar. 12, 2022</time
+                    >
+                  </p>
+                </div>
+                <button
+                  id="dropdownComment3Button"
+                  data-dropdown-toggle="dropdownComment3"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  type="button"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 3"
+                  >
+                    <path
+                      d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                    />
+                  </svg>
+                  <span class="sr-only">Comment settings</span>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownComment3"
+                  class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul
+                    class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownMenuIconHorizontalButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Remove</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Report</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </footer>
+              <p>
+                The article covers the essentials, challenges, myths and stages
+                the UX designer should consider while creating the design
+                strategy.
+              </p>
+              <div class="flex items-center mt-4 space-x-4">
+                <button
+                  type="button"
+                  class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                >
+                  <svg
+                    class="mr-1.5 w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 18"
+                  >
+                    <path
+                      d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                    />
+                  </svg>
+                  Reply
+                </button>
+              </div>
+            </article>
+            <article
+              class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+            >
+              <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                  <p
+                    class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-white"
+                  >
+                    <img
+                      class="mr-2 w-6 h-6 rounded-full"
+                      src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                      alt="Helene Engels"
+                    />Helene Engels
+                  </p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    <time pubdate datetime="2022-06-23" title="June 23rd, 2022"
+                      >Jun. 23, 2022</time
+                    >
+                  </p>
+                </div>
+                <button
+                  id="dropdownComment4Button"
+                  data-dropdown-toggle="dropdownComment4"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  type="button"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 3"
+                  >
+                    <path
+                      d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownComment4"
+                  class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul
+                    class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownMenuIconHorizontalButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Remove</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Report</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </footer>
+              <p>
+                Thanks for sharing this. I do came from the Backend development
+                and explored some of the tools to develop my Side Projects.
+              </p>
+              <div class="flex items-center mt-4 space-x-4">
+                <button
+                  type="button"
+                  class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                >
+                  <svg
+                    class="mr-1.5 w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 18"
+                  >
+                    <path
+                      d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                    />
+                  </svg>
+                  Reply
+                </button>
+              </div>
+            </article>
+          </section>
+        </article>
+      </div>
+      </main>
+    <footer class="bg-gray-50 dark:bg-gray-800 antialiased">
+      <div class="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:p-10">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Company
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">About</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Careers</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Brand Center</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Help center
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Discord Server</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Legal
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Licensing</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Terms</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Company
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">About</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Careers</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Brand Center</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Download
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">iOS</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Android</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Windows</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">MacOS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="text-center">
+          <a
+            href="#"
+            class="flex justify-center items-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
+          >
+            <img src="./img/Logo.png" alt="" />
+          </a>
+          <span
+            class="block text-sm text-center text-gray-500 dark:text-gray-400"
+            >© 2021-2022 <a href="#" class="hover:underline">Flowbite™</a>. All
+            Rights Reserved.
+          </span>
+          <ul class="flex justify-center mt-5 space-x-5">
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </footer>
+      
+    <!-- flowbite js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
