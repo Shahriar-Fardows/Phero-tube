@@ -26,6 +26,7 @@ const categoriesId = async (Id, isSort = false) => {
     }
 
     const categoriesCardContainer = document.getElementById('main-section');
+    categoriesCardContainer.classList = 'grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-[20px] mx-[15px] lg:mx-[30px]';
     categoriesCardContainer.innerHTML = '';
 
 
